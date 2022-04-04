@@ -51,7 +51,7 @@ function Upload() {
                         <div className="my-2 container">
                             <div>
                                 <div className="m-2 text-dark">
-                                    <input type="file" name="file" onChange={changeHandler} />
+                                    <input className="form-control form-control-lg max-w-80" type="file" name="file" onChange={changeHandler} />
                                     <button type="button"  className="mx-2 btn btn-primary btn-lg" onClick={handleSubmission} disabled={disabledSubmit}>Import</button>
                                 </div>
                                 <div>

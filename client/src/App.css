@@ -72,3 +72,8 @@ a:hover {
     min-height: 2em;
     min-width: 75vw;
 }
+
+.max-w-80 {
+    max-width: 80%;
+    display: initial !important;
+}
