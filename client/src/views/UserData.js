@@ -15,7 +15,6 @@ function UserData() {
         async function fetchData() {
             // GET request using axios inside useEffect React hook
             const response = await axios.get(`${CONFIG.API_URL}/users/data`)
-                // console.log('response: ', response);
             if (response.data) {
                 setUserData(response.data)
             }
@@ -23,35 +22,26 @@ function UserData() {
         fetchData();
     }, []);
 
-    return ( <
-        div className = "App" >
-        <
-        header className = "App-full" >
-        <
-        h1 className = "m-4" >
-        Consult your user 's data. < /
-        h1 > <
-        div className = "App-body" >
-        <
-        div className = "White-bg" >
-        <
-        div className = 'container' >
-        <
-        div >
-        <
-        div className = "m-2 text-dark"
-        style = {
-            { display: 'flex', height: '100%' }
-        } > { /* <BasicTable rows={userData.rows || []} columns={userData.columns || []}></BasicTable> */ } <
-        DataTable rows = { userData.rows || [] }
-        columns = { userData.columns || [] } > < /DataTable> < /
-        div > <
-        /div> < /
-        div > <
-        /div> < /
-        div > <
-        /header> < /
-        div >
+    return (
+        <div className="App">
+            <header className="App-full">
+                <h1 className="m-4">
+                    Consult your user 's data.
+                </h1>
+                <div className="App-body">
+                    <div className="White-bg">
+                        <div className='container'>
+                            <div>
+                                <div className="m-2 text-dark" style={{ display: 'flex', height: '100%' }}>
+                                    <DataTable rows={userData.rows || []} columns={userData.columns || []}>
+                                    </DataTable>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+        </div>
     );
 }
 
